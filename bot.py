@@ -1,6 +1,10 @@
+import os
 import discord
 from discord.ext import commands
+from dotenv import load_dotenv
 import aiohttp
+
+load_dotenv()
 
 bot = commands.Bot(command_prefix="$")
 
@@ -77,4 +81,4 @@ def get_rules():
             """
     return rules
 
-bot.run('ODY0NzYwODM0MzI0NjkzMDAy.YO6JSQ.1G_ZC6KUzwvRiPrO4RD8FglvOOQ')
+bot.run(os.getenv(('TOKEN')))
